@@ -1,0 +1,26 @@
+<div class="filter-container">
+    <button routerLink="/missions">Back to Mission List</button>
+    <div class="launch-date-filters">
+      <button *ngFor="let year of years" (click)="filterByYear(year)">{{ year }}</button>
+    </div>
+    <div class="launch-success-filters">
+      <button (click)="filterBySuccess(true)">Successful Launch</button>
+      <button (click)="filterBySuccess(false)">Failed Launch</button>
+    </div>
+  </div>
+  
+  <div class="missions-container">
+    <div *ngFor="let mission of filteredMissions" class="mission-card">
+      <img [src]="mission.links.mission_patch_small" alt="Mission Patch" class="mission-patch">
+      <div class="mission-info">
+        <h3>{{ mission.mission_name }}</h3>
+        <p>Launch Year: {{ mission.launch_year }}</p>
+        <p>Successful Launch: {{ mission.launch_success ? 'Yes' : 'No' }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    Developed by - Jeevan Prakash
+  </footer>
+  

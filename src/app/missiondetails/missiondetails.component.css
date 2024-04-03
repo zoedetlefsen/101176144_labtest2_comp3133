@@ -1,0 +1,33 @@
+.mission-details {
+  background-color: #FFC0CB;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.mission-details h1 {
+  color: #AD1457; 
+  text-align: center;
+}
+
+.mission-header, .rocket-info, .launch-site, .launch-details {
+  border: 1px solid #E91E63; 
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.mission-header h2, .rocket-info h3, .launch-site h3, .launch-details h3 {
+  color: #C2185B;
+}
+
+.more-info {
+  text-align: center;
+}
+
+
+.more-info h3 {
+  margin-bottom: 10px;
+}
+
+

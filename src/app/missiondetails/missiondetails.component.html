@@ -1,0 +1,15 @@
+<!-- missiondetails.component.html -->
+<div class="mission-details">
+    <div class="mission-header">
+      <img [src]="mission?.links?.mission_patch_small" alt="Mission Patch">
+      <h2>{{ mission?.mission_name }}</h2>
+    </div>
+    <div class="mission-info">
+      <p><strong>Flight Number:</strong> {{ mission?.flight_number }}</p>
+      <p><strong>Launch Year:</strong> {{ mission?.launch_year }}</p>
+      <p><strong>Rocket:</strong> {{ mission?.rocket?.rocket_name }}</p>
+      <p><strong>Launch Site:</strong> {{ mission?.launch_site?.site_name }}</p>
+      <p><strong>Details:</strong> {{ mission?.details }}</p>
+    </div>
+  </div>
+  

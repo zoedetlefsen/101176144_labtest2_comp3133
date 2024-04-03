@@ -1,0 +1,20 @@
+<!-- missionlist.component.html -->
+
+<h1>SpaceX Launches</h1>
+<button routerLink="/filtermissions">Click to Filter Missions</button>
+
+<!-- Selected mission details -->
+<app-missiondetails [mission]="selectedMission"></app-missiondetails>
+
+<div class="missions-container">
+  <div *ngFor="let launch of launches" class="mission" (click)="selectMission(launch)">
+    <img [src]="launch.links.mission_patch_small" alt="Mission patch" class="mission-patch">
+    <div class="mission-details">
+      <h2>{{ launch.mission_name }}</h2>
+      <p>Year: {{ launch.launch_year }}</p>
+      <p *ngIf="launch.details">{{ launch.details }}</p>
+      <p *ngIf="!launch.details">No details available</p>
+    </div>
+  </div>
+</div>
+
