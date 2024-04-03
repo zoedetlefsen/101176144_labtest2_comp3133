@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SpacexService, Launch } from '../spacex.service'; // Update the import path as necessary
+import { SpacexService, Launch } from '../spacex.service'; 
 
 @Component({
   selector: 'app-missionlist',
@@ -7,13 +7,13 @@ import { SpacexService, Launch } from '../spacex.service'; // Update the import 
   styleUrls: ['./missionlist.component.css']
 })
 export class MissionlistComponent implements OnInit {
-  public launches: Launch[] = [];       // This will hold the list of all launches
-  public selectedMission: Launch | null = null; // This will hold the currently selected mission
+  public launches: Launch[] = [];     
+  public selectedMission: Launch | null = null; 
 
-  constructor(private spacexService: SpacexService) {} // Injecting the SpaceX service
+  constructor(private spacexService: SpacexService) {} 
 
   ngOnInit(): void {
-    // Fetch all launches when the component initializes
+
     this.spacexService.getLaunches().subscribe(
       (data: Launch[]) => {
         this.launches = data;
@@ -24,7 +24,6 @@ export class MissionlistComponent implements OnInit {
     );
   }
 
-  // Method to set the currently selected mission
   selectMission(launch: Launch): void {
     this.selectedMission = launch;
   }
